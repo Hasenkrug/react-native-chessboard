@@ -44,6 +44,10 @@ type ChessboardProps = {
    */
   boardSize?: number;
   /**
+   * Indicates whether the chessboard is rotated or not.
+   */
+  rotated?: boolean;
+  /**
    *
    * It gives the possibility to customise the chessboard pieces.
    *

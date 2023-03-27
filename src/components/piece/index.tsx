@@ -41,6 +41,7 @@ const Piece = React.memo(
         useBoardOperations();
 
       const {
+        rotated: rotatedFromChessboardProps,
         durations: { move: moveDuration },
         gestureEnabled: gestureEnabledFromChessboardProps,
       } = useChessboardProps();
@@ -205,8 +206,13 @@ const Piece = React.memo(
         })
         .onUpdate(({ translationX, translationY }) => {
           if (!gestureEnabled.value) return;
-          translateX.value = offsetX.value + translationX;
-          translateY.value = offsetY.value + translationY;
+          if (!rotatedFromChessboardProps) {
+            translateX.value = offsetX.value + translationX;
+            translateY.value = offsetY.value + translationY;
+          } else {
+            translateX.value = offsetX.value - translationX;
+            translateY.value = offsetY.value - translationY;
+          }
         })
         .onEnd(() => {
           if (!gestureEnabled.value) return;
