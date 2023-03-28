@@ -1,5 +1,5 @@
 {
-  "name": "react-native-chessboard",
+  "name": "@hasenkrug/react-native-chessboard-adapted",
   "version": "0.1.2",
   "description": "A lightweight, simple, and high-performing chessboard for React Native",
   "main": "lib/commonjs/index",
@@ -36,13 +36,16 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/enzomanuelmangano/react-native-chessboard",
-  "author": "Enzo Manuel Mangano <enzomanuelmangano@gmail.com> (https://github.com/enzomanuelmangano)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasenkrug/react-native-chessboard.git"
+  },
+  "author": "Enzo Manuel Mangano <enzomanuelmangano@gmail.com> (https://github.com/enzomanuelmangano) - adapted by Hasenkrug <togomade@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/enzomanuelmangano/react-native-chessboard/issues"
+    "url": "https://github.com/hasenkrug/react-native-chessboard/issues"
   },
-  "homepage": "https://github.com/enzomanuelmangano/react-native-chessboard#readme",
+  "homepage": "https://github.com/hasenkrug/react-native-chessboard#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -119,6 +122,7 @@
       "prettier"
     ],
     "rules": {
+      "no-cycle": "off",
       "prettier/prettier": [
         "error",
         {
@@ -155,5 +159,9 @@
         }
       ]
     ]
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }
