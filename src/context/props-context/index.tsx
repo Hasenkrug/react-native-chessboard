@@ -98,6 +98,7 @@ const defaultChessboardProps: ChessboardContextType = {
   withNumbers: true,
   boardSize: DEFAULT_BOARD_SIZE,
   pieceSize: DEFAULT_BOARD_SIZE / 8,
+  rotated: false,
 };
 
 const ChessboardPropsContext = React.createContext<ChessboardContextType>(

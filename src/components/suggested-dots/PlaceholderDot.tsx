@@ -40,7 +40,7 @@ const PlaceholderDot: React.FC<PlaceholderDotProps> = React.memo(
 
     const rPlaceholderStyle = useAnimatedStyle(() => {
       const canBeSelected = isSelectable.value;
-      return { opacity: withTiming(canBeSelected ? 0.15 : 0) };
+      return { opacity: withTiming(canBeSelected ? 0.5 : 0) };
     }, []);
 
     return (
