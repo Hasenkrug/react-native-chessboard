@@ -13,8 +13,10 @@ const SuggestedDots: React.FC = React.memo(() => {
 
   return (
     <View
+      // eslint-disable-next-line react-native/no-inline-styles
       style={{
         ...StyleSheet.absoluteFillObject,
+        zIndex: 10,
       }}
     >
       {board.map((row, y) =>
