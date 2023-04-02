@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
-import Chessboard, {
-  ChessboardRef,
-} from '@hasenkrug/react-native-chessboard-adapted';
+import Chessboard, { ChessboardRef } from 'react-native-chessboard';
 
 export default function App() {
   const ref = useRef<ChessboardRef>(null);
