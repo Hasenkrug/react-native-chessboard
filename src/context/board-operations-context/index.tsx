@@ -185,7 +185,13 @@ const BoardOperationsContextProviderComponent = React.forwardRef<
 
   const onSelectPiece = useCallback(
     (square: Square) => {
-      selectedSquare.value = square;
+      if (selectedSquare.value === square) {
+        selectedSquare.value = null;
+        selectableSquares.value = [];
+        return;
+      } else {
+        selectedSquare.value = square;
+      }
 
       const validSquares = (chess.moves({
         square,
